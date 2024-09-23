@@ -2,7 +2,11 @@
 
 if [[ $# -eq 1 ]]; then
 	filename="$1"
-	echo -e "#!/bin/bash\n" > "$filename"
+	if [[ -f "$1" ]]; then
+		echo "Info: File '$1' already exists."
+	else
+		echo -e "#!/bin/bash\n" > "$filename"
+	fi
 
 	if [[ $? -ne 0 ]]; then
 		echo "Error: Failed to create file $filename"
