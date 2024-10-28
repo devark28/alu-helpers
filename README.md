@@ -42,7 +42,7 @@ To create a new directory named "my-project":
 alucli setup my-project
 ```
 
-To create a new script named "my-script":
+To create a new script or edit an existing script named "my-script":
 
 ```bash
 alucli create my-script
